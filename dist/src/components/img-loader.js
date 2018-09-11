@@ -182,7 +182,7 @@ var ImgLoaderComponent = (function () {
             // Using <img> tag
             if (!this.element) {
                 // create img element if we dont have one
-                this.element = this.renderer.createElement(this.eRef.nativeElement, 'img');
+                this.element = this.renderer.createElement('img');
             }
             // set it's src
             this.renderer.setAttribute(this.element, 'src', imageUrl);
@@ -191,6 +191,7 @@ var ImgLoaderComponent = (function () {
                     return _this.renderer.setAttribute(_this.element, 'src', _this.fallbackUrl);
                 });
             }
+            this.renderer.appendChild(this.eRef.nativeElement, this.element);
         }
         else {
             // Not using <img> tag

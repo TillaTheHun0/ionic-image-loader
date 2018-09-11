@@ -194,7 +194,6 @@ export class ImgLoaderComponent implements OnInit {
       if (!this.element) {
         // create img element if we dont have one
         this.element = this.renderer.createElement(
-          this.eRef.nativeElement,
           'img'
         );
       }
@@ -207,6 +206,8 @@ export class ImgLoaderComponent implements OnInit {
           this.renderer.setAttribute(this.element, 'src', this.fallbackUrl)
         );
       }
+
+      this.renderer.appendChild(this.eRef.nativeElement, this.element);
     } else {
       // Not using <img> tag
 
