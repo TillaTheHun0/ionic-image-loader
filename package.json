@@ -2,8 +2,8 @@
   "name": "ionic-image-loader",
   "version": "5.0.5",
   "description": "Ionic Component and Service to load images in a background thread and cache them for later use",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "typings": "dist/src/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist aot",
     "build": "ngc",

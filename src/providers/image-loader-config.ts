@@ -203,7 +203,7 @@ export class ImageLoaderConfig {
    */
   setFileTransferOptions(options: {
     trustAllHosts;
-    [key]: any;
+    [key: string]: any;
   }): void {
     // do nothing, plugin deprecated.
   }
